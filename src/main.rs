@@ -1,5 +1,7 @@
 use rust_essential_training::sections::bitwise::do_bitwise;
 use rust_essential_training::sections::average::average;
+use rust_essential_training::sections::functions::say_hello;
+use rust_essential_training::sections::loops_challenge::loops_challenge;
 
 fn main() {
     // Optional positional 
@@ -13,4 +15,11 @@ fn main() {
 
     assert_eq!(avg, 45.1);
     println!("{}", avg);
+
+    // functions
+    // 
+
+    // loops challenge
+    loops_challenge();
+
 }
