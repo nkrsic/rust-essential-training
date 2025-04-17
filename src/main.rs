@@ -2,6 +2,7 @@ use rust_essential_training::sections::bitwise::do_bitwise;
 use rust_essential_training::sections::average::average;
 use rust_essential_training::sections::functions::say_hello;
 use rust_essential_training::sections::loops_challenge::loops_challenge;
+use rust_essential_training::sections::trim_spaces::test_trim_spaces;
 
 fn main() {
     // Optional positional 
@@ -21,5 +22,10 @@ fn main() {
 
     // loops challenge
     loops_challenge();
+
+    // trim spaces challenge
+
+    test_trim_spaces();
+
 
 }
