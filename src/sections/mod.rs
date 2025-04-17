@@ -9,5 +9,6 @@ pub mod functions;
 pub mod loops;
 pub mod loops_challenge;
 pub mod statements_expressions;
+pub mod string;
 pub mod temperature;
 pub mod tuples;
