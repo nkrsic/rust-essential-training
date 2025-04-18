@@ -1,8 +1,9 @@
 use rand::Rng;
+use std::cmp::Ordering;
 use std::io;
 
 pub fn play_higher_or_lower() {
-    let random_number = rand::rng().gen_range(1..101);
+    let random_number = rand::rng().random_range(1..101);
     let mut guess: i32 = -1;
     let mut buffer = String::new();
 
@@ -27,6 +28,38 @@ pub fn play_higher_or_lower() {
             println!("My number is greater than your guess.");
         } else {
             println!("My number is less than your guess.")
+        }
+    }
+}
+
+pub fn play_higher_or_lower_w_idioms() {
+    let random_number = rand::rng().random_range(1..101);
+    let mut guess: i32 = -1;
+    let mut buffer = String::new();
+
+    println!("Checking buffer!");
+
+    while guess != random_number {
+        println!("Please guess a number between 1 and 100 (inclusive)");
+        buffer.clear();
+
+        io::stdin()
+            .read_line(&mut buffer)
+            .expect("Error reading your input!");
+
+        match buffer.trim().parse::<i32>() {
+            Ok(num) => {
+                guess = num;
+                match guess.cmp(&random_number) {
+                    Ordering::Equal => println!("You guessed it!"),
+                    Ordering::Less => println!("The number is greater than your guess."),
+                    Ordering::Greater => println!("The number is less than your guess"),
+                }
+            }
+            Err(_) => {
+                println!("An error occurred parsing your guess");
+                continue;
+            }
         }
     }
 }
