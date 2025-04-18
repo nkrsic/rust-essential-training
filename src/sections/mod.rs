@@ -1,4 +1,3 @@
-
 pub mod arithmetic;
 pub mod arrays;
 pub mod average;
@@ -7,10 +6,12 @@ pub mod borrowing;
 pub mod conditionals;
 pub mod formatting;
 pub mod functions;
+pub mod higher_or_lower;
 pub mod loops;
 pub mod loops_challenge;
 pub mod slices;
 pub mod statements_expressions;
+pub mod std_input;
 pub mod string;
 pub mod temperature;
 pub mod trim_spaces;
