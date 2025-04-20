@@ -1,12 +1,18 @@
 use rust_essential_training::sections::average::average;
 use rust_essential_training::sections::bitwise::do_bitwise;
+use rust_essential_training::sections::box_datatype::do_something_w_box;
 use rust_essential_training::sections::command_line_args::use_command_line_args;
+use rust_essential_training::sections::default_trait_impl::print_space_structs_default;
 use rust_essential_training::sections::functions::say_hello;
+use rust_essential_training::sections::generic_structs::do_something_w_generic;
 use rust_essential_training::sections::higher_or_lower::play_higher_or_lower;
+use rust_essential_training::sections::implement_display::with_implement_display;
 use rust_essential_training::sections::loops_challenge::loops_challenge;
 use rust_essential_training::sections::options::with_result_and_options;
 use rust_essential_training::sections::reading_from_files::{check_roster, read_a_file};
 use rust_essential_training::sections::std_input::use_stdin;
+use rust_essential_training::sections::sum_boxes::sum_w_boxes;
+use rust_essential_training::sections::traits::print_space_structs;
 use rust_essential_training::sections::trim_spaces::test_trim_spaces;
 use rust_essential_training::sections::writing_to_files::write_to_file;
 
@@ -138,4 +144,14 @@ fn main() {
     // Even though the two structs share the same shape
     // you cannot use the same functions interchangeably,
     // you'd get a compiler error
+
+    // Chapter 11.      Generic Types
+    do_something_w_box();
+    sum_w_boxes();
+
+    // Chapter 12
+    print_space_structs();
+    print_space_structs_default();
+
+    with_implement_display();
 }
