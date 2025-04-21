@@ -1,11 +1,15 @@
+use ::std::env;
 use rust_essential_training::sections::average::average;
 use rust_essential_training::sections::bitwise::do_bitwise;
 use rust_essential_training::sections::box_datatype::do_something_w_box;
 use rust_essential_training::sections::command_line_args::use_command_line_args;
 use rust_essential_training::sections::default_trait_impl::print_space_structs_default;
+use rust_essential_training::sections::enums::with_enums;
+use rust_essential_training::sections::final_challenge::count_words_from_file;
 use rust_essential_training::sections::functions::say_hello;
 use rust_essential_training::sections::generic_structs::do_something_w_generic;
 use rust_essential_training::sections::higher_or_lower::play_higher_or_lower;
+use rust_essential_training::sections::higher_or_lower::play_higher_or_lower_w_idioms;
 use rust_essential_training::sections::implement_display::with_implement_display;
 use rust_essential_training::sections::loops_challenge::loops_challenge;
 use rust_essential_training::sections::options::with_result_and_options;
@@ -15,8 +19,6 @@ use rust_essential_training::sections::sum_boxes::sum_w_boxes;
 use rust_essential_training::sections::traits::print_space_structs;
 use rust_essential_training::sections::trim_spaces::test_trim_spaces;
 use rust_essential_training::sections::writing_to_files::write_to_file;
-
-use ::std::env;
 
 #[derive(Debug, Clone)]
 struct Shuttle {
@@ -77,6 +79,7 @@ fn main() {
 
     // Chapter 8 -- comment out to skip guessing game
     // play_higher_or_lower();
+    // play_higher_or_lower_w_idioms();
 
     // Chapter 9
     use_command_line_args();
@@ -156,4 +159,7 @@ fn main() {
 
     // Chapter 13
     with_enums();
+
+    // Final Challenge
+    count_words_from_file();
 }
