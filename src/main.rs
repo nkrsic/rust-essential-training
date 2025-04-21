@@ -152,6 +152,8 @@ fn main() {
     // Chapter 12
     print_space_structs();
     print_space_structs_default();
-
     with_implement_display();
+
+    // Chapter 13
+    with_enums();
 }
